@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="graphs_tsp_project">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/graphs_tsp_project/out/artifacts/graphs_tsp_project_jar/graphs_tsp_project.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
