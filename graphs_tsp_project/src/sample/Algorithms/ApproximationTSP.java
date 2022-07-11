@@ -31,6 +31,21 @@ public class ApproximationTSP extends Algorithm {
         return shortestPathCost;
     }
 
+    public Stack<Integer> getShortestPath() {
+
+        Stack<Integer> shortestPath = new Stack<>();
+        shortestPath.push(0);
+
+        Vertex currentVertex  = lastVertex;
+
+        while(currentVertex != null)
+        {
+            shortestPath.push(currentVertex.getId());
+            currentVertex = currentVertex.getPrev();
+        }
+
+        return shortestPath;
+    }
     // Method to find the shortest path, searching in depth, adding the closest vertex each time
     // (assuming there is always a route from one vertex to another since we have to do with a complete graph)
     private void dfs(Vertex currentVertex, int verticesVisited)
@@ -58,6 +73,7 @@ public class ApproximationTSP extends Algorithm {
                 {
                     closestVertexToReach = i;
                     costToReachClosestVertex = neighbourVertex.getCostToReach();
+
                 }
             }
         }
@@ -69,21 +85,7 @@ public class ApproximationTSP extends Algorithm {
     }
 
     // Returns a Stack of integers representing the path of the best shortest route to take
-    public Stack<Integer> getShortestPath() {
 
-        Stack<Integer> shortestPath = new Stack<>();
-        shortestPath.push(0);
-
-        Vertex currentVertex  = lastVertex;
-
-        while(currentVertex != null)
-        {
-            shortestPath.push(currentVertex.getId());
-            currentVertex = currentVertex.getPrev();
-        }
-
-        return shortestPath;
-    }
     public static void printResult(int[][] graph){
         Stack<Integer> bestPath;
         long start;
