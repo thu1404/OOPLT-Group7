@@ -1,8 +1,7 @@
 # Travelling salesman problem
 
-Solution for the famous tsp problem using algorithms:
+tsp problem using algorithms:
 
 Brute Force (Backtracking),
-Branch And Bound,
-Dynamic Programming,
+Bitonic,
 DFS Approximation Algorithm (with closest neighbour)
